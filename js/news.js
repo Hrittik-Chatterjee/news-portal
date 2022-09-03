@@ -1,3 +1,5 @@
+// categories function
+
 const loadCategories =()=>{
     fetch('https://openapi.programming-hero.com/api/news/categories')
     .then(res=> res.json())
@@ -13,13 +15,18 @@ const displayCategories=categories=>{
         createUi.classList.add('navbar-nav' ,'me-auto', 'mb-2', 'mb-lg-0')
         createUi.innerHTML=`
         <li class="me-5 fs-6">
-        <a class="nav-link active fw-normal" aria-current="page" href="#">${category.category_name}</a>
+        <a class="nav-link active fw-normal" aria-current="page" id="${category.category_id}">${category.category_name}</a>
          </li>
          `
          categoryContainer.appendChild(createUi)
+        
     }
 }
 
+
+
+
+    // breaking news Function
 const loadBreakingNews =()=>{
     fetch('https://openapi.programming-hero.com/api/news/category/01')
     .then(res => res.json())
@@ -49,6 +56,10 @@ const displayNews= newses=>{
     newsContainer.appendChild(createDiv)
    }
 }
+
+
+
+
 
 
 
