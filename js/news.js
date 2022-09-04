@@ -65,26 +65,26 @@ const clicked=id=>{
 <div class='card' onclick='newsId(${news._id})' >
   <img src="${news.thumbnail_url}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title fs-5 text-truncate">${news.title}</h5>
-    <p class="card-text text-truncate">${news.details}</p>
-    <div class="mb-5"> 
-    <span class="d-block">Author:  ${news.author.name}  <img style='width:30px; height:30px' class="ms-3 rounded" src="${news.author.img}" class="card-img-top" alt="..."></span>
-    <span> <i class="fa-regular fa-eye me-3"></i>${news.total_view}</span>
+             <h5 class="card-title fs-5 text-truncate">${news.title}</h5>
+            <p class="card-text text-truncate">${news.details}</p>
+            <div class="mb-5"> 
+            <span class="d-block">Author:  ${news.author.name}  <img style='width:30px; height:30px' class="ms-3 rounded" src="${news.author.img}" class="card-img-top" alt="..."></span>
+            <span> <i class="fa-regular fa-eye me-3"></i>${news.total_view}</span>
   </div>
-  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary d-block mt-6" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-Show Details
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title" id="staticBackdropLabel">${news.title}</h5>
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div><img src="${news.thumbnail_url}" class=" ms-5 p-5" alt="..."></div>
+              <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary d-block mt-6" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Show Details
+            </button>
+                                    
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">${news.title}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div><img src="${news.thumbnail_url}" class=" ms-5 p-5" alt="..."></div>
 <div class="modal-body">
 ${news.details}
 </div>
