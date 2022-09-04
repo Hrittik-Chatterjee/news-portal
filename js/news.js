@@ -27,6 +27,7 @@ const displayCategories=categories=>{
 
 const clicked=id=>{
    toggleLoader(true)
+   noNewsFound(true)
         const loadCategoriesId =()=>{
             fetch('https://openapi.programming-hero.com/api/news/categories')
             .then(res=> res.json())
@@ -112,3 +113,9 @@ const toggleLoader=isLoading=>{
     }
 }
 
+const noNewsFound= isFound=>{
+    const noNewsSection= document.getElementById('newsFound')
+    if(isFound){
+        noNewsSection.classList.add('d-none')
+    }
+}
