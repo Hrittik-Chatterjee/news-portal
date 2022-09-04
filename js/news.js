@@ -54,8 +54,8 @@ const clicked=id=>{
 
           
               const displayNews= newses=>{
-                            const newsContainer=document.getElementById('news-container')
-                            
+                  
+                  const newsContainer=document.getElementById('news-container')
                            for(const news of newses){
                             
                             const createDiv=document.createElement('div')
